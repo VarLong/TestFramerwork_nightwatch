@@ -1,0 +1,230 @@
+{
+  "devtest": {
+    "appgw_host": "appgw-client-a.dev.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.dev.mr.tv3cloud.com",
+    "launch_url": "http://reachclient.dev.mr.tv3cloud.com/",
+    "subscriber_cert_url": "appgw-stsssl-a.dev.mr.tv3cloud.com",
+    "channel_map_id": 2360589,
+    "offer_id": 4130048 
+  },
+  "orc": {
+    "appgw_host": "appgw-client-a.orc.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.orc.mr.tv3cloud.com",
+    "channel_map_id": 2005224,
+    "launch_url": "http://reachclient.orc.mr.tv3cloud.com/",
+    "offer_id": 4025234,
+    "subscriber_cert_url": "appgw-stsssl-a.orc.mr.tv3cloud.com"
+  },
+  "pprod": {
+    "appgw_host": "appgw-client-a.pprod.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.pprod.mr.tv3cloud.com",
+    "channel_map_id": 93852,
+    "launch_url": "http://reachclient.pprod.mr.tv3cloud.com/",
+    "offer_id": 4006832,
+    "subscriber_cert_url": "appgw-stsssl-a.pprod.mr.tv3cloud.com"
+  },
+  "perfa": {
+    "appgw_host": "appgw-client-a.perfa.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.perfa.mr.tv3cloud.com",
+    "channel_map_id": 2000002,
+    "launch_url": "http://reachclient.perfa.mr.tv3cloud.com/",
+    "offer_id": 4000001,
+    "subscriber_cert_url": "appgw-stsssl-a.perfa.mr.tv3cloud.com"
+  },
+  "sim": {
+    "appgw_host": "appgw-client-a.sim.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.sim.mr.tv3cloud.com",
+    "channel_map_id": 518,
+    "launch_url": "http://reachclient.sim.mr.tv3cloud.com/",
+    "offer_id": 4000336,
+    "subscriber_cert_url": "appgw-stsssl-a.sim.mr.tv3cloud.com",
+    "subscription_package_id": "ec223fb8-11d1-4469-ba43-e21ed53a049b"
+  },
+  "osim": {
+    "appgw_host": "appgw-client-a.osim.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.osim.mr.tv3cloud.com",
+    "channel_map_id": 2000020,
+    "launch_url": "http://reachclient.osim.mr.tv3cloud.com/",
+    "offer_id": 4001394,
+    "subscriber_cert_url": "appgw-stsssl-a.osim.mr.tv3cloud.com"
+  },
+  "tlsproda": {
+    "appgw_host": "appgw-client-a.proda.tls.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.proda.tls.tv3cloud.com",
+    "channel_map_id": 2000093,
+    "live_offer_id": 2000214,
+    "launch_url": "http://reachclient.proda.tls.tv3cloud.com/",
+    "loginType": "TLSsso",
+    "offer_id": 4000008,
+    "subscriber_cert_url": "appgw-stsssl-a.proda.tls.tv3cloud.com",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9"
+  },
+  "tlsprodb": {
+    "appgw_host": "appgw-client-a.prodb.tls.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodb.tls.tv3cloud.com",
+    "channel_map_id": 2000063,
+    "launch_url": "http://reachclient.prodb.tls.tv3cloud.com/",
+    "loginType": "TLSsso",
+    "offer_id": 1,
+    "subscriber_cert_url": "appgw-stsssl-a.prodb.tls.tv3cloud.com",
+    "subscription_package_id": "46b17fa5-6812-4f92-98a8-5fd8043b29c0",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9"
+  },
+  "tlsprodc": {
+    "appgw_host": "appgw-client-a.prodc.tls.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodc.tls.tv3cloud.com",
+    "channel_map_id": 2810,
+    "launch_url": "http://reachclient.prodc.tls.tv3cloud.com/",
+    "loginType": "LiveID",
+    "offer_id": 4000049,
+    "subscriber_cert_url": "appgw-stsssl-a.prodc.tls.tv3cloud.com",
+    "subscription_package_id": "88012476-64be-458d-89e1-793ce00c045f",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9"
+  },
+  "bceprodc": {
+    "appgw_host": "appgw-client-a.prodc.bce.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodc.bce.tv3cloud.com",
+    "launch_url": "http://reachclient.prodc.bce.tv3cloud.com/",
+    "loginType": "LiveID",
+    "offer_id": 4000016,
+    "subscriber_cert_url": "appgw-stsssl-a.prodc.bce.tv3cloud.com",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9",
+    "reachclient_current_locale": "fr-CA"
+  },
+  "jdsprodc": {
+    "appgw_host": "appgw-client-a.prodc.jds.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodc.jds.tv3cloud.com",
+    "launch_url": "http://reachclient.prodc.jds.tv3cloud.com/",
+    "loginType": "LiveID",
+    "channel_map_id": 2000012,
+    "offer_id": 4000000,
+    "subscriber_cert_url": "appgw-stsssl-a.prodc.jds.tv3cloud.com",
+    "testAccountID": "tv3pf_yanwu@outlook.com",
+    "testAccountPassword": "Tv3PF.Test"
+  },
+  "jdsproda": {
+    "appgw_host": "appgw-client-a.proda.jds.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.proda.jds.tv3cloud.com",
+    "launch_url": "http://reachclient.proda.jds.tv3cloud.com/",
+    "loginType": "LiveID",
+    "channel_map_id": 2000009,
+    "offer_id": 4000002,
+    "subscriber_cert_url": "appgw-stsssl-a.proda.jds.tv3cloud.com",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9",
+    "ignoreRoutingGroup": true
+  },
+  "sktproda": {
+    "appgw_host": "appgw-client-a.proda.skt.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.proda.skt.tv3cloud.com",
+    "loginType": "LiveID",
+    "channel_map_id": 2000040,
+    "launch_url": "http://reachclient.proda.skt.tv3cloud.com/",
+    "offer_id": 4000006,
+    "subscriber_cert_url": "appgw-stsssl-a.proda.skt.tv3cloud.com",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9"
+  },
+  "sktprodb": {
+    "appgw_host": "appgw-client-a.prodb.skt.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodb.skt.tv3cloud.com",
+    "loginType": "LiveID",
+    "channel_map_id": 2000078,
+    "launch_url": "http://reachclient.prodb.skt.tv3cloud.com/",
+    "offer_id": 4000042,
+    "subscriber_cert_url": "appgw-stsssl-a.prodb.skt.tv3cloud.com",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9"
+  },
+  "oorc": {
+    "appgw_host": "appgw-client-a.oorc.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.oorc.mr.tv3cloud.com",
+    "channel_map_id": 46212,
+    "launch_url": "http://reachclient.oorc.mr.tv3cloud.com/",
+    "offer_id": 4064819,
+    "subscriber_cert_url": "appgw-stsssl-a.oorc.mr.tv3cloud.com"
+  },
+  "oci": {
+    "appgw_host": "appgw-client-a.oint.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.oint.mr.tv3cloud.com",
+    "channel_map_id": 2000319,
+    "launch_url": "http://reachclient.oint.mr.tv3cloud.com/",
+    "offer_id": 4000001,
+    "subscriber_cert_url": "appgw-stsssl-a.oint.mr.tv3cloud.com"
+  },
+  "ohydra": {
+    "appgw_host": "appgw-client-a.ofunk.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.ofunk.mr.tv3cloud.com",
+    "channel_map_id": 2000019,
+    "launch_url": "http://reachclient.ofunk.mr.tv3cloud.com/?TBN=${BuildNumber}-mr-int",
+    "useStubPlayer": true,
+    "offer_id": 4000003,
+    "subscriber_cert_url": "appgw-stsssl-a.ofunk.mr.tv3cloud.com"
+  },
+  "ofunk": {
+    "appgw_host": "appgw-client-a.ofunk.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.ofunk.mr.tv3cloud.com",
+    "channel_map_id": 2000019,
+    "launch_url": "http://reachclient.ofunk.mr.tv3cloud.com/",
+    "offer_id": 4000003,
+    "subscriber_cert_url": "appgw-stsssl-a.ofunk.mr.tv3cloud.com"
+  },
+  "ofunk-jds": {
+    "appgw_host": "appgw-client-a.ofunk.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.ofunk.mr.tv3cloud.com",
+    "channel_map_id": 2000019,
+    "launch_url": "http://reachclient.ofunk.mr.tv3cloud.com/?TBN=${BuildNumber}-jds-prodc",
+    "offer_id": 4000005,
+    "subscriber_cert_url": "appgw-stsssl-a.ofunk.mr.tv3cloud.com",
+    "useStubPlayer": true
+  },
+  "rfbproda": {
+    "appgw_host": "appgw-client-a.proda.rfb.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.proda.rfb.tv3cloud.com",
+    "channel_map_id": 2000018,
+    "live_offer_id": 2000014,
+    "launch_url": "http://reachclient.proda.rfb.tv3cloud.com/",
+    "loginType": "LiveID",
+    "offer_id": 4000005,
+    "subscriber_cert_url": "appgw-stsssl-a.proda.rfb.tv3cloud.com",
+    "testAccountID": "noc3etv3@live.com",
+    "testAccountPassword": "jJgTBMZSb9"
+  },
+  "bceprodo": {
+    "appgw_host": "appgw-client-a.prodo.bce.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodo.bce.tv3cloud.com",
+    "channel_map_id": 2000012,
+    "launch_url": "http://reachclient.prodo.bce.tv3cloud.com/",
+    "loginType": "LiveID",
+    "offer_id": 4000002,
+    "subscriber_cert_url": "appgw-stsssl-a.prodo.bce.tv3cloud.com"
+  },
+  "mfnproda": {
+    "appgw_host": "appgw-client-a.proda.mfn.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.proda.mfn.tv3cloud.com",
+    "channel_map_id": 2000034,
+    "launch_url": "http://reachclient.proda.mfn.tv3cloud.com/",
+    "offer_id": 4000097,
+    "subscriber_cert_url": "appgw-stsssl-a.proda.mfn.tv3cloud.com"
+  },
+  "insprodc": {
+    "appgw_host": "appgw-client-a.prodc.ins.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.prodc.ins.tv3cloud.com",
+    "channel_map_id": 2000011,
+    "launch_url": "http://reachclient.prodc.ins.tv3cloud.com/",
+    "offer_id": 4000001,
+    "subscriber_cert_url": "appgw-stsssl-a.prodc.ins.tv3cloud.com"
+  },
+  "cip": {
+    "appgw_host": "appgw-client-a.cip.mr.tv3cloud.com",
+    "cert_url": "appgw-operatorstsssl-a.cip.mr.tv3cloud.com",
+    "channel_map_id": 2000087,
+    "launch_url": "http://reachclient.cip.mr.tv3cloud.com/",
+    "offer_id": 4000015,
+    "subscriber_cert_url": "appgw-stsssl-a.cip.mr.tv3cloud.com"
+    }
+}

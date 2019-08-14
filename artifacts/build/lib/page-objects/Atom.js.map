@@ -1,0 +1,1 @@
+{"version":3,"sources":["lib/page-objects/Atom.ts"],"names":[],"mappings":"AAAA,IAAM,IAAI,GAAG,MAAM,CAAC;AACpB,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC","file":"Atom.js","sourcesContent":["const Atom = \"atom\";\nconsole.log(Atom);"]}

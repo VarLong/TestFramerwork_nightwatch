@@ -1,0 +1,60 @@
+// Base Nightwatch configs
+{
+    src_folders: ["artifacts/build/tests"],
+    output_folder: "artifacts/reports",
+    globals_path: "configs/globals.js",
+    custom_reporter_path: "artifacts/build/lib/custom-reporters/reporter.js",
+    custom_commands_path: "artifacts/build/lib/custom-commands",
+    custom_assertions_path: "artifacts/build/lib/custom-assertions",
+    page_objects_path: "artifacts/build/lib/page-objects",
+
+    test_settings: {
+        // Nightwatch default environment, used if no --env is specified.
+        // These values also extend configs from other --env if specified.
+        default: {
+            launch_url: "http://reachclient.dev.mr.tv3cloud.com/",
+            launch_url_testSSO: "https://sts.dev.mr.tv3cloud.com/v1/oauth/signin/test?response_type=token&redirect_uri=http%3a%2f%2freachclient.dev.mr.tv3cloud.com/?oauth%3Dtest",            
+            selenium_host: "ondemand.saucelabs.com",
+            selenium_port: 80,
+            selenium: {
+                start_process: false                
+            },
+            silent: true,
+            end_session_on_fail: false,
+            username: "${SAUCELABS_USER}",
+            access_key: "${SAUCELABS_KEY}",
+            saucelabIdleTimeout: 90000,
+			zookeeper_servers: "mrkf.cloudapp.net:21811,mrkf.cloudapp.net:21812,mrkf.cloudapp.net:21813",
+			kafka_topic: "test-runs-Topic",
+            desiredCapabilities: {
+                platform: "Windows 8",
+                browserName: "chrome",
+                javascriptEnabled: true,
+                acceptSslCerts: true,
+                Build: "${runId}"                                
+            },
+		    locals: {
+			},            
+            cert_path: "configs/certificates/OperatorTestApp.pfx",
+            cert_url: "appgw-operatorstsssl-a.dev.mr.tv3cloud.com",
+            cert_passphrase: "MyPassword!",
+            appgw_host: "appgw-client-a.dev.mr.tv3cloud.com",            
+            offer_id: 13,
+			testAccountID: "${testAccountID}",                    //the default testAccountID is RCPFTest009@outlook.com
+            testAccountPassword: "${testAccountPassword}",    //the default testAccountPassword is Esoteric$
+            purchasePin: "1111",
+            parentalcontrolPin: "2222",
+			adultpin: "3333",
+            wrongPin: "1234",
+            useStubPlayer: false,
+            mockMode: "${mockMode}", // values can be 'record', 'mock', or false for disabled
+            loginType: "TestSSO", // Values can be "TestSSO", "LiveID", "certificate", "TLSsso". Default/fallback is LiveID
+			routingGroup: "BG-Site${SITE}-Slot-${SLOT}", // We need to read this from RCS, this is a temporary solution bypassing RCS
+			disable_colors: true,
+			shieldLogEnabled: "${shieldLogEnabled}",
+			tlsSSOAccountId: "${tlsSSOAccountId}",
+			waitForConditionTimeout: "${waitForConditionTimeout}",
+            "subscriber_cert_path": "configs/certificates/NightwatchSubscriberCert.pfx"            
+        }
+    },
+}

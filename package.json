@@ -1,0 +1,38 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "globalsModule.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "gulp",
+    "test": "nightwatch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.0",
+    "fs-extra": "^8.1.0",
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^7.1.0",
+    "gulp-typescript": "3.0.0",
+    "json5": "^0.4.0",
+    "lodash": "^3.10.1",
+    "log4js": "^2.3.3",
+    "minimist": "^1.2.0",
+    "mssql": "^3.3.0",
+    "nightwatch": "^1.2.1",
+    "request": "^2.69.0",
+    "selenium-server": "^3.141.59",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chromedriver": "^76.0.0"
+  }
+}
