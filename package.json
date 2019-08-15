@@ -30,9 +30,11 @@
     "selenium-server": "^3.141.59",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
+    "typescript-require": "^0.2.10",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "@types/node": "^12.7.2",
     "chromedriver": "^76.0.0"
   }
 }

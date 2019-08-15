@@ -2,7 +2,6 @@ module.exports = {
   tags: ['google'],
 
   'Demo test Google' : function (client) {
-    
     console.log("google! s")
     client
       .url('http://google.no')

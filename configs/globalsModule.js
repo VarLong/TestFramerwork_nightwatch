@@ -1,3 +1,6 @@
+
+console.log('start globalModules.js');
+
 module.exports = {
   // this controls whether to abort the test execution when an assertion failed and skip the rest
   // it's being used in waitFor commands and expect assertions
@@ -38,8 +41,15 @@ module.exports = {
 
   'test_env': {
     myGlobal: 'test_global',
-    beforeEach: function () {
 
+    before(cb) {
+      console.log('test_env before');
+      cb();
+    },
+
+    beforeEach: function (browser, cb) {
+      console.log("test_env beforeEach");
+      cb();
     }
   },
 
