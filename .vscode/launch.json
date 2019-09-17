@@ -14,6 +14,7 @@
             "stopOnEntry": false,
             "args": [
                 "--test", "artifacts\\build\\tests\\google.js",
+                "--env", "ofunk-localchrome"
             ]
         }
     ]

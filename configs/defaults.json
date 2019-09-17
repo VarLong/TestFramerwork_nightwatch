@@ -1,55 +1,25 @@
 {
-    "src_folders": ["artifacts/build/tests"],
+    "src_folders": [
+        "artifacts/build/tests"
+    ],
     "output_folder": "artifacts/reports",
     "globals_path": "configs/globalsModule.js",
     "custom_reporter_path": "artifacts/build/lib/custom-reporters/reporter.js",
     "custom_commands_path": "artifacts/build/lib/custom-commands",
     "custom_assertions_path": "artifacts/build/lib/custom-assertions",
     "page_objects_path": "artifacts/build/lib/page-objects",
+    "test_workers": true,
     "test_settings": {
         "default": {
             "launch_url": "http://localhost",
-            "launch_url_testSSO": "https://sts.dev.mr.tv3cloud.com/v1/oauth/signin/test?response_type=token&redirect_uri=http%3a%2f%2freachclient.dev.mr.tv3cloud.com/?oauth%3Dtest",
-            "selenium_host": "ondemand.saucelabs.com",
-            "selenium_port": 80,
+            "selenium_host": "",
+            "selenium_port": 4445,
             "selenium": {
-                "start_process": false
+                "start_process": true
             },
-            "silent": true,
-            "end_session_on_fail": false,
-            "username": "${SAUCELABS_USER}",
-            "access_key": "${SAUCELABS_KEY}",
-            "saucelabIdleTimeout": 90000,
-            "zookeeper_servers": "mrkf.cloudapp.net:21811,mrkf.cloudapp.net:21812,mrkf.cloudapp.net:21813",
-            "kafka_topic": "test-runs-Topic",
             "desiredCapabilities": {
-                "platform": "Windows 8",
-                "browserName": "chrome",
-                "javascriptEnabled": true,
-                "acceptSslCerts": true,
-                "Build": "${runId}"
-            },
-            "locals": {},
-            "cert_path": "configs/certificates/OperatorTestApp.pfx",
-            "cert_url": "appgw-operatorstsssl-a.dev.mr.tv3cloud.com",
-            "cert_passphrase": "MyPassword!",
-            "appgw_host": "appgw-client-a.dev.mr.tv3cloud.com",
-            "offer_id": 13,
-            "testAccountID": "${testAccountID}",
-            "testAccountPassword": "${testAccountPassword}",
-            "purchasePin": "1111",
-            "parentalcontrolPin": "2222",
-            "adultpin": "3333",
-            "wrongPin": "1234",
-            "useStubPlayer": false,
-            "mockMode": "${mockMode}",
-            "loginType": "TestSSO",
-            "routingGroup": "BG-Site${SITE}-Slot-${SLOT}",
-            "disable_colors": true,
-            "shieldLogEnabled": "${shieldLogEnabled}",
-            "tlsSSOAccountId": "${tlsSSOAccountId}",
-            "waitForConditionTimeout": "${waitForConditionTimeout}",
-            "subscriber_cert_path": "configs/certificates/NightwatchSubscriberCert.pfx"
+                "browserName": ""
+            }
         }
     }
 }

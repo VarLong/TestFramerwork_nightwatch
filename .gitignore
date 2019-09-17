@@ -1,3 +1,7 @@
 
+.vscode/
 artifacts
 node_modules
+ShieldLog
+*.log
+./package-lock.json

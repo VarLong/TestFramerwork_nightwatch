@@ -104,5 +104,13 @@ module.exports = {
     getDateDifferenceInSeconds: function (date1: Date, date2: Date): number {
         const dateDiffInMS = date2.getTime() - date1.getTime();
         return Math.abs(Math.floor(dateDiffInMS / 1000));
+    },
+
+    createDir(path: string) {
+        fse.mkdirsSync(path, function (err: any) {
+            if (err) {
+                console.error(err);
+            }
+        });
     }
 };
