@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "nightwatch"
+    "test": "nightwatch",
+    "shield": "node artifacts/build/lib/cli"
   },
   "author": "",
   "license": "ISC",

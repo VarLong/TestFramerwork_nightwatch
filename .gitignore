@@ -1,5 +1,7 @@
 
 .vscode/
+.vs
+npm-debug.log
 artifacts
 node_modules
 ShieldLog
