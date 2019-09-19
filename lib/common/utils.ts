@@ -1,11 +1,24 @@
 ///<reference path='../../typings/tsd.d.ts' />
 
 const fse = require("fs-extra");
+const JSON5 = require("json5");
+
 function pad(n: number): string {
     return n < 10 ? "0" + n.toString(10) : n.toString(10);
 }
 
 module.exports = {
+
+    // Load .js, .json, or .json5 file, or die trying.
+    checkConfigPath(pathname: string) {
+        try {
+            return JSON5.parse(fse.readFileSync(pathname).toString());
+        } catch (err) {
+            console.error(`Error loading config ${pathname} ${err}`);
+            process.exit(9);
+        }
+    },
+
     stringFormat: (...args: string[]): string => {
         let format = args ? args[0] : "",
             parmatch: RegExpMatchArray,

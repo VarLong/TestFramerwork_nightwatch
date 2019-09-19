@@ -13,7 +13,7 @@
             "cwd": "${workspaceRoot}",
             "stopOnEntry": false,
             "args": [
-                "--test", "artifacts\\build\\tests\\google.js",
+                "--test", " artifacts\\build\\tests\\Authentication\\LogInLogOut.js",
                 "--env", "ofunk-localchrome"
             ]
         }

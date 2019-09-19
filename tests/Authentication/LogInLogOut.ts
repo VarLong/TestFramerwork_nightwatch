@@ -8,13 +8,16 @@
 
 import { NightWatchBrowser } from "../../typings/nightwatch/nightwatch";
 
+const setup = require("../../lib/common/setup");
+
 module.exports = {
     tags: ["CI"],
     before(browser: NightWatchBrowser) {
+        setup.begin(browser);
     },
 
     after(browser: NightWatchBrowser) {
-        browser.end();
+        setup.end(browser);
     },
 
     "Log in Git hub"(browser: NightWatchBrowser) {

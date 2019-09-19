@@ -2,30 +2,16 @@ const chromedriver = require("chromedriver");
 const minimist = require('minimist');
 const fs = require("fs");
 const path = require("path")
-const JSON5 = require('json5');
-const deployments = checkConfigPath("./configs/deployments.json5");
-const capabilities = checkConfigPath("./configs/capabilities.json5");
-const options = require('./artifacts/build/lib/cli/options.js');
 const utils = require("./artifacts/build/lib/common/utils");
+const deployments = utils.checkConfigPath("./configs/deployments.json5");
+const capabilities = utils.checkConfigPath("./configs/capabilities.json5");
+const options = require('./artifacts/build/lib/cli/options.js');
 const merge = require("lodash/object/merge");
 const args = minimist(process.argv.slice(2), options.cli);
-
-// Load .js, .json, or .json5 file, or die trying.
-function checkConfigPath(pathname) {
-    try {
-        return JSON5.parse(fs.readFileSync(pathname).toString());
-    } catch (err) {
-        console.error(`Error loading config ${pathname} ${err}`);
-        process.exit(9);
-    }
-}
+const test_settings = require("./configs/test_settings");
 
 function mergeDeploymentAndCapabilitiesJson(settings, deployment) {
-    settings['test_settings'][args.env] =  Object.assign(deployments[args.deployment], capabilities[args.device]); 
-    const envConfigPath = "configs/TestConfigData/";
-    const commonVal = checkConfigPath(path.resolve(envConfigPath + "common.json5"));
-    const val = checkConfigPath(path.resolve(envConfigPath + deployment + '.json5'));
-    settings['test_settings'][args.env]  = merge(settings['test_settings'][args.env], commonVal, val);  
+    settings['test_settings'][args.env] = test_settings;
     return settings;
 }
 
@@ -36,10 +22,14 @@ if (!process.env.runId) {
     }();
 }
 
-console.log(`runId: ${process.env.runId}`);
 const folderlogPath = "ShieldLog/" + process.env.runId;
 utils.createDir(folderlogPath);
 
+const log = console.log;
+console.log = function () {
+    const args = [].slice.call(arguments);
+    log.apply(console.log, [utils.formattedTimestamp()].concat(args));
+};
 
 module.exports = (function (settings) {
     if (args.env) {
@@ -68,7 +58,7 @@ module.exports = (function (settings) {
         console.log(args.deployment);
         const deploment = deployments[args.deployment];
         settings = mergeDeploymentAndCapabilitiesJson(settings, args.deployment);
-    }else{
+    } else {
         console.log(`Can not find deployment ${args.deployment}`);
     }
 
