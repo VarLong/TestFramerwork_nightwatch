@@ -1,5 +1,6 @@
 
 console.log('start globalModules.js');
+const test_settings = require("./test_settings");
 
 module.exports = {
   // this controls whether to abort the test execution when an assertion failed and skip the rest
@@ -33,7 +34,7 @@ module.exports = {
   // Automatically retrying failed assertions - You can tell Nightwatch to automatically retry failed assertions until a given timeout is reached, before the test runner gives up and fails the test.
   retryAssertionTimeout: 1000,
 
-  'test_settings': {},
+  'test_settings': test_settings,
 
   before(cb) {
     var browser = this;

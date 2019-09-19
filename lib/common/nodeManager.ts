@@ -1,4 +1,4 @@
-import {NightWatchBrowser} from "../../typings/nightwatch/nightwatch";
+import { NightWatchBrowser } from "../../typings/nightwatch/nightwatch";
 
 const http = require("http");
 const url = require("url");
@@ -38,27 +38,7 @@ module.exports = {
             const host = browser.globals.test_settings.selenium_host;
             const port = browser.globals.test_settings.selenium_port;
             const sessionID = browser.sessionId;
-            if (host.indexOf("10.160.234.32") > -1 || host.indexOf("10.160.195.243") > -1) {
-                resolve("BrowserLab");
-            } else if (sessionID && host.indexOf("127.0.0.1")) {
-                const requestOptions = {
-                    host: host,
-                    port: port,
-                    path: "/grid/api/testsession?session=" + sessionID,
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                };
-
-                createRequest(requestOptions).done(function (result: any) {
-                    try {
-                        resolve(JSON.parse(result).proxyId);
-                    } catch (ex) {
-                        reject("Cannot get the proxy ID. Got response from GRID: " + result);
-                    }
-                }, reject);
-            } else if (host.indexOf("127.0.0.1") > -1) {
+            if (host.indexOf("127.0.0.1") > -1) {
                 resolve("LocalHost");
             } else {
                 reject("The session ID is null, is session started?");

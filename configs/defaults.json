@@ -9,17 +9,5 @@
     "custom_assertions_path": "artifacts/build/lib/custom-assertions",
     "page_objects_path": "artifacts/build/lib/page-objects",
     "test_workers": true,
-    "test_settings": {
-        "default": {
-            "launch_url": "http://localhost",
-            "selenium_host": "",
-            "selenium_port": 4445,
-            "selenium": {
-                "start_process": true
-            },
-            "desiredCapabilities": {
-                "browserName": ""
-            }
-        }
-    }
+    "test_settings": {}
 }

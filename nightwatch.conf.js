@@ -10,10 +10,6 @@ const merge = require("lodash/object/merge");
 const args = minimist(process.argv.slice(2), options.cli);
 const test_settings = require("./configs/test_settings");
 
-function mergeDeploymentAndCapabilitiesJson(settings, deployment) {
-    settings['test_settings'][args.env] = test_settings;
-    return settings;
-}
 
 if (!process.env.runId) {
     process.env.runId = process.env.buildStartTime ? new Date(process.env.buildStartTime).getTime().toString() + "0000" : function () {
@@ -57,7 +53,7 @@ module.exports = (function (settings) {
     if (args.deployment && deployments[args.deployment]) {
         console.log(args.deployment);
         const deploment = deployments[args.deployment];
-        settings = mergeDeploymentAndCapabilitiesJson(settings, args.deployment);
+        settings['test_settings'][args.env] = test_settings;
     } else {
         console.log(`Can not find deployment ${args.deployment}`);
     }
