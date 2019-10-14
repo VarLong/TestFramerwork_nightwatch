@@ -149,5 +149,18 @@
             }
 
         }
+    },
+    "local-android-device": {
+        "selenium_host": "0.0.0.0",
+        "selenium_port": 4723,
+        "desiredCapabilities": {
+            "platformName": "Android",
+            "appPackage": "com.wdiodemoapp",
+            "appActivity": ".MainActivity",
+            "browserName": "",
+            "deviceName": "Pixel2",
+            "orientation":  "PORTRAIT",
+            "avd":  "Pixel2"
+        }
     }
 }
