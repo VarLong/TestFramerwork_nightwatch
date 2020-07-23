@@ -45,25 +45,4 @@ module.exports = {
             }
         });
     },
-
-    getNodesInfo: function (host: string, port: string, path: string) {
-        return new Promise(function (resolve: any, reject: any) {
-            const requestOptions = {
-                host: host,
-                port: port,
-                path: path || "/grid/admin/NodeManager",
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            };
-            createRequest(requestOptions).done(function (result: any) {
-                try {
-                    resolve(JSON.parse(result));
-                } catch (ex) {
-                    reject("Cannot get nodes info. Got response from GRID: " + result);
-                }
-            }, reject);
-        });
-    }
 };

@@ -1,5 +1,6 @@
 {
     "rules": {
+        "no-undef": false,
         "triple-equals": true,
         "use-isnan": true,
         "align": true,
@@ -23,7 +24,7 @@
         "semicolon": [true, "always"],
         "no-consecutive-blank-lines": true,
         "no-trailing-whitespace": true,
-        "jsdoc-format": true,
+        "jsdoc-format": false,
         "no-var-keyword":true
     }
 }

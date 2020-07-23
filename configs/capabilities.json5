@@ -1,166 +1,200 @@
 {
-    "localchrome": {
-        "selenium_host": "127.0.0.1",
-        "selenium_port": 4444,
-        "selenium": {
-            "start_process": true,
-            "host": "127.0.0.1",
-            "port": 4444,
-            "server_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-3.4.0.jar",
-            "cli_args": {
-                "webdriver.chrome.driver": "",
-                "webdriver.ie.driver": "",
-                "webdriver.firefox.profile": ""
-            }
+  'chrome-selenium-grid': {
+    selenium_host: '192.168.174.134',
+    selenium_port: 4444,
+    desiredCapabilities: {
+      platform: 'WIN10',
+      platformName: 'WIN10',
+      deviceType: 'browser',
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        useAutomationExtension: false,
+        w3c: false,
+        prefs: {
+          'credentials_enable_service': false,
+          'profile.password_manager_enabled': false,
+          'profile.default_content_setting_values.plugins': 1,
+          'profile.content_settings.plugin_whitelist.adobe-flash-player': 1,
+          'profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player': 1,
+          'profile.default_content_setting_values.notifications': 2
         },
-        "desiredCapabilities": {
-            "browserName": "chrome",
-            "deviceType": "browser",
-            "loggingPrefs": {
-                "browser": "ALL",
-                "performance": "ALL",
-                "driver": "ALL"
-            },
-            // https://sites.google.com/a/chromium.org/chromedriver/capabilities
-            "goog:chromeOptions": {
-                "excludeSwitches": ["disable-component-update"],
-                "prefs": {
-                    "credentials_enable_service": false,
-                    "profile.password_manager_enabled": false,
-                    "profile.default_content_setting_values.plugins": 1,
-                    "profile.content_settings.plugin_whitelist.adobe-flash-player": 1,
-                    "profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player": 1,
-                    "profile.default_content_setting_values.notifications": 2
-                },
-                "args": [
-                    "start-maximized",
-                    "disable-webgl",
-                    "blacklist-webgl",
-                    "blacklist-accelerated-compositing",
-                    "disable-accelerated-2d-canvas",
-                    "disable-accelerated-compositing",
-                    "disable-accelerated-layers",
-                    "disable-accelerated-plugins",
-                    "disable-accelerated-video",
-                    "disable-accelerated-video-decode",
-                    "disable-gpu",
-                    "disable-infobars",
-                    "test-type",
-                    "disable-extensions"
-                ]
-            }
-        }
-    },
-    "localEdge": {
-        "selenium_host": "127.0.0.1",
-        "selenium_port": 4444,
-        "selenium": {
-            "start_process": true,
-            "host": "127.0.0.1",
-            "port": 4444,
-            "server_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-2.52.0.jar",
-            "cli_args": {
-                "webdriver.edge.driver": "C:\\Program Files (x86)\\Microsoft Web Driver\\MicrosoftWebDriver.exe"
-            }
-        },
-        "desiredCapabilities": {
-            "platform": "Windows 10",
-            "browserName": "MicrosoftEdge",
-            "deviceType": "browser",
-            "javascriptEnabled": true
-        }
-    },
-    "localIE": {
-        "selenium_host": "127.0.0.1",
-        "selenium_port": 4444,
-        "selenium": {
-            "start_process": true,
-            "host": "127.0.0.1",
-            "port": 4444,
-            "server_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-2.52.0.jar",
-            "cli_args": {
-                "webdriver.ie.driver": "node_modules/.bin/iedriver"
-            }
-        },
-        "desiredCapabilities": {
-            "browserName": "internet explorer",
-            "deviceType": "browser"
-        }
-    },
-    "10ft-localchrome": {
-        "selenium_host": "127.0.0.1",
-        "selenium_port": 4444,
-        "selenium": {
-            "start_process": true,
-            "host": "127.0.0.1",
-            "port": 4444,
-            "server_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-2.52.0.jar",
-            "cli_args": {
-                "webdriver.chrome.driver": "node_modules/.bin/chromedriver",
-                "webdriver.ie.driver": "",
-                "webdriver.firefox.profile": ""
-            }
-        },
-        "desiredCapabilities": {
-            "browserName": "chrome",
-            "deviceType": "STB",
-            "chromeOptions": {
-                "prefs": {
-                    "credentials_enable_service": false,
-                    "profile.password_manager_enabled": false,
-                    "profile.default_content_setting_values.plugins": 1,
-                    "profile.content_settings.plugin_whitelist.adobe-flash-player": 1,
-                    "profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player": 1
-                },
-                "args": [
-                    "start-fullscreen",
-                    "disable-infobars",
-                    "user-agent=mediaroom10ft",
-                    "window-size=1920,1080"
-                ]
-            },
-            "screenResolution": "1920x1080",
-            "loggingPrefs": {
-                "browser": "ALL",
-                "driver": "ALL"
-            }
-
-        }
-    },
-    "local-android": {
-        "selenium_host": "127.0.0.1",
-        "selenium_port": 4723,
-        "desiredCapabilities": {
-            "platform": "ANDROID",
-            "platformName": "Android",
-            "browserName": "",
-            "deviceName": "YOUR Device Name",
-            "deviceType": "phone",
-            "autoWebview": false,
-            "deviceReadyTimeout": 15,
-            "noSign": true,
-            "appPackage": "com.ericsson.mediaroom.tv3client",
-            "appActivity": "ericsson.tv.cloud.client.android.MainActivity",
-            "appWaitActivity": "ericsson.tv.cloud.client.android.MainActivity",
-            "androidDeviceSocket": "com.ericsson.mediaroom.tv3client_devtools_remote",
-            "loggingPrefs": {
-                "browser": "ALL",
-                "driver": "ALL"
-            }
-
-        }
-    },
-    "local-android-device": {
-        "selenium_host": "0.0.0.0",
-        "selenium_port": 4723,
-        "desiredCapabilities": {
-            "platformName": "Android",
-            "appPackage": "com.wdiodemoapp",
-            "appActivity": ".MainActivity",
-            "browserName": "",
-            "deviceName": "Pixel2",
-            "orientation":  "PORTRAIT",
-            "avd":  "Pixel2"
-        }
+        args: [
+          'start-maximized',
+          'disable-webgl',
+          'blacklist-webgl',
+          'blacklist-accelerated-compositing',
+          'disable-accelerated-2d-canvas',
+          'disable-accelerated-compositing',
+          'disable-accelerated-layers',
+          'disable-accelerated-plugins',
+          'disable-accelerated-video',
+          'disable-accelerated-video-decode',
+          'disable-gpu',
+          'disable-infobars',
+          'test-type',
+          'disable-extensions'
+        ],
+        excludeSwitches: ['enable-automation']
+      },
+      screenResolution: '1920x1080',
+      version: '84'
     }
+  },
+  localchrome: {
+    selenium_host: '127.0.0.1',
+    selenium_port: 4444,
+    selenium: {
+      start_process: true,
+      host: '127.0.0.1',
+      port: 4444,
+      server_path: 'node_modules/selenium-server/lib/runner/selenium-server-standalone-3.141.59.jar'
+    },
+    desiredCapabilities: {
+      browserName: 'chrome',
+      deviceType: 'browser',
+      loggingPrefs: {
+        browser: 'ALL',
+        performance: 'ALL',
+        driver: 'ALL'
+      },
+      // https://sites.google.com/a/chromium.org/chromedriver/capabilities
+      'goog:chromeOptions': {
+        excludeSwitches: ['disable-component-update'],
+        prefs: {
+          credentials_enable_service: false,
+          'profile.password_manager_enabled': false,
+          'profile.default_content_setting_values.plugins': 1,
+          'profile.content_settings.plugin_whitelist.adobe-flash-player': 1,
+          'profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player': 1,
+          'profile.default_content_setting_values.notifications': 2
+        },
+        args: [
+          'start-maximized',
+          'disable-webgl',
+          'blacklist-webgl',
+          'blacklist-accelerated-compositing',
+          'disable-accelerated-2d-canvas',
+          'disable-accelerated-compositing',
+          'disable-accelerated-layers',
+          'disable-accelerated-plugins',
+          'disable-accelerated-video',
+          'disable-accelerated-video-decode',
+          'disable-gpu',
+          'disable-infobars',
+          'test-type',
+          'disable-extensions'
+        ]
+      }
+    }
+  },
+  localIE: {
+    selenium_host: '127.0.0.1',
+    selenium_port: 4444,
+    selenium: {
+      start_process: true,
+      host: '127.0.0.1',
+      port: 4444,
+      server_path: 'node_modules/selenium-server/lib/runner/selenium-server-standalone-3.141.59.jar',
+      cli_args: {
+        'webdriver.ie.driver': 'C:\\tmp\\webdriver\\iedriver\\iedriver_3.141.59_x64bit.exe'
+      }
+    },
+    desiredCapabilities: {
+      browserName: 'internet explorer',
+      deviceType: 'browser'
+    }
+  },
+  localEdge: {
+    selenium_host: '127.0.0.1',
+    selenium_port: 4444,
+    selenium: {
+      start_process: true,
+      host: '127.0.0.1',
+      port: 4444,
+      server_path: 'node_modules/selenium-server/lib/runner/selenium-server-standalone-2.52.0.jar',
+      cli_args: {
+        'webdriver.edge.driver': 'C:\\Program Files (x86)\\Microsoft Web Driver\\MicrosoftWebDriver.exe'
+      }
+    },
+    desiredCapabilities: {
+      platform: 'Windows 10',
+      browserName: 'MicrosoftEdge',
+      deviceType: 'browser',
+      javascriptEnabled: true
+    }
+  },
+  '10ft-localchrome': {
+    selenium_host: '127.0.0.1',
+    selenium_port: 4444,
+    selenium: {
+      start_process: true,
+      host: '127.0.0.1',
+      port: 4444,
+      server_path: 'node_modules/selenium-server/lib/runner/selenium-server-standalone-2.52.0.jar',
+      cli_args: {
+        'webdriver.chrome.driver': 'node_modules/.bin/chromedriver',
+        'webdriver.ie.driver': '',
+        'webdriver.firefox.profile': ''
+      }
+    },
+    desiredCapabilities: {
+      browserName: 'chrome',
+      deviceType: 'STB',
+      chromeOptions: {
+        prefs: {
+          credentials_enable_service: false,
+          'profile.password_manager_enabled': false,
+          'profile.default_content_setting_values.plugins': 1,
+          'profile.content_settings.plugin_whitelist.adobe-flash-player': 1,
+          'profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player': 1
+        },
+        args: [
+          'start-fullscreen',
+          'disable-infobars',
+          'user-agent=mediaroom10ft',
+          'window-size=1920,1080'
+        ]
+      },
+      screenResolution: '1920x1080',
+      loggingPrefs: {
+        browser: 'ALL',
+        driver: 'ALL'
+      }
+    }
+  },
+  'local-android': {
+    selenium_host: '127.0.0.1',
+    selenium_port: 4723,
+    desiredCapabilities: {
+      platform: 'ANDROID',
+      platformName: 'Android',
+      browserName: '',
+      deviceName: 'YOUR Device Name',
+      deviceType: 'phone',
+      autoWebview: false,
+      deviceReadyTimeout: 15,
+      noSign: true,
+      appPackage: 'com.ericsson.mediaroom.tv3client',
+      appActivity: 'ericsson.tv.cloud.client.android.MainActivity',
+      appWaitActivity: 'ericsson.tv.cloud.client.android.MainActivity',
+      androidDeviceSocket: 'com.ericsson.mediaroom.tv3client_devtools_remote',
+      loggingPrefs: {
+        browser: 'ALL',
+        driver: 'ALL'
+      }
+    }
+  },
+  'local-android-device': {
+    selenium_host: '0.0.0.0',
+    selenium_port: 4723,
+    desiredCapabilities: {
+      platformName: 'Android',
+      appPackage: 'com.wdiodemoapp',
+      appActivity: '.MainActivity',
+      browserName: '',
+      deviceName: 'Pixel2',
+      orientation: 'PORTRAIT',
+      avd: 'Pixel2'
+    }
+  }
 }

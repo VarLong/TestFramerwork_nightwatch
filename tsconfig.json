@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "ES2015",
+        "module": "CommonJS",
+        "sourceMap": false,
+        "paths": {
+            "*": [
+                "shield"
+            ],
+            "src/*": [
+                "shield/*"
+            ]
+        },
+        "lib": [
+            "ES2015"
+        ],
+        "types": [
+            "node"
+        ],
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "forceConsistentCasingInFileNames": true
+    }
+}

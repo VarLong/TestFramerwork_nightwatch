@@ -21,12 +21,13 @@ module.exports = {
     },
 
     "Log in Git hub"(browser: NightWatchBrowser) {
-        browser.url("http://github.com/");
+        browser.url("https://www.bing.com/?mkt=zh-CN");
+        browser.pause(10000);
     },
 
     "Log in and check for logo"(browser: NightWatchBrowser) {
-        const gitHubPage = browser.page.GitHubPage();
-        gitHubPage.waitGitHubVisible();
+        // const gitHubPage = browser.page.GitHubPage();
+        // gitHubPage.waitGitHubVisible();
         // browser.compareImage(".btn-primary-mktg");
     }
 };

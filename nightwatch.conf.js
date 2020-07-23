@@ -1,4 +1,3 @@
-const chromedriver = require("chromedriver");
 const minimist = require('minimist');
 const fs = require("fs");
 const path = require("path")
