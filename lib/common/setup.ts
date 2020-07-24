@@ -9,7 +9,6 @@ module.exports = {
     },
 
     end(browser: NightWatchBrowser) {
-        browser.end();
         console.log("Setup.ts end----->");
     }
 };

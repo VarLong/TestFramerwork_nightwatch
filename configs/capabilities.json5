@@ -1,5 +1,5 @@
 {
-  'chrome-selenium-grid': {
+  'chrome-windows-selenium-grid': {
     selenium_host: '192.168.174.134',
     selenium_port: 4444,
     desiredCapabilities: {
@@ -11,7 +11,7 @@
         useAutomationExtension: false,
         w3c: false,
         prefs: {
-          'credentials_enable_service': false,
+          credentials_enable_service: false,
           'profile.password_manager_enabled': false,
           'profile.default_content_setting_values.plugins': 1,
           'profile.content_settings.plugin_whitelist.adobe-flash-player': 1,
@@ -38,6 +38,46 @@
       },
       screenResolution: '1920x1080',
       version: '84'
+    }
+  },
+  'ieedge-selenium-grid': {
+    selenium_host: '192.168.174.134',
+    selenium_port: 4444,
+    desiredCapabilities: {
+      platform: 'WINDOWS',
+      deviceType: 'browser',
+      browserName: 'MicrosoftEdge',
+      screenResolution: '1920x1080',
+      version: '84',
+      avoidProxy: true
+    }
+  },
+  'firefox-windows-selenium-grid': {
+    selenium_host: '10.164.83.127',
+    selenium_port: 4444,
+    desiredCapabilities: {
+      platform: 'WINDOWS',
+      deviceType: 'browser',
+      browserName: 'firefox',
+      javascriptEnabled: true,
+      'dom.webnotifications.enabled': false,
+      loggingPrefs: {
+        browser: 'ALL',
+        driver: 'ALL'
+      },
+      version: '78'
+    }
+  },
+  'ie11-selenium-grid': {
+    selenium_host: '10.164.83.127',
+    selenium_port: 4444,
+    desiredCapabilities: {
+      platform: 'WINDOWS',
+      deviceType: 'browser',
+      browserName: 'internet explorer',
+      ignoreProtectedModeSettings: true,
+      ignoreZoomSetting: true,
+      version: '11'
     }
   },
   localchrome: {

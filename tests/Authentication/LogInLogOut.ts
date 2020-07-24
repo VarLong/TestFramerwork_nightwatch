@@ -22,7 +22,7 @@ module.exports = {
 
     "Log in Git hub"(browser: NightWatchBrowser) {
         browser.url("https://www.bing.com/?mkt=zh-CN");
-        browser.pause(10000);
+        browser.pause(3000);
     },
 
     "Log in and check for logo"(browser: NightWatchBrowser) {

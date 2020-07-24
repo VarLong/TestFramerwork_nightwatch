@@ -1,14 +1,9 @@
 const minimist = require('minimist');
-const fs = require("fs");
-const path = require("path")
 const utils = require("./artifacts/build/lib/common/utils");
 const deployments = utils.checkConfigPath("./configs/deployments.json5");
-const capabilities = utils.checkConfigPath("./configs/capabilities.json5");
 const options = require('./artifacts/build/lib/cli/options.js');
-const merge = require("lodash/object/merge");
 const args = minimist(process.argv.slice(2), options.cli);
 const test_settings = require("./configs/test_settings");
-
 
 if (!process.env.runId) {
     process.env.runId = process.env.buildStartTime ? new Date(process.env.buildStartTime).getTime().toString() + "0000" : function () {
@@ -17,9 +12,11 @@ if (!process.env.runId) {
     }();
 }
 
+// Create shield log path.
 const folderlogPath = "ShieldLog/" + process.env.runId;
 utils.createDir(folderlogPath);
 
+// Format console.log
 const log = console.log;
 console.log = function () {
     const args = [].slice.call(arguments);
@@ -37,25 +34,15 @@ module.exports = (function (settings) {
     }
 
     if (args.device) {
-        console.log(args.device);
-        // const dev = args.device;
-        // if (capabilities[dev]) {
-        //     console.log(`Add device ${dev} to test run.`);
-        //     for (const key in capabilities[dev]) {
-        //         settings['test_settings']['desiredCapabilities'] = capabilities[dev][key];
-        //     }
-        // } else {
-        //     console.log(`Not find device ${dev} in capabilities.`);
-        // }
+        console.log(`Run in device: ${args.device}`);
     }
 
     if (args.deployment && deployments[args.deployment]) {
-        console.log(args.deployment);
-        const deploment = deployments[args.deployment];
+        console.log(`Run in deployment: ${args.deployment}`);
         settings['test_settings'][args.env] = test_settings;
     } else {
         console.log(`Can not find deployment ${args.deployment}`);
     }
-
+    settings['test_settings'][args.env]["folderlogPath"] = folderlogPath;
     return settings;
 })(require('./configs/defaults.json'));

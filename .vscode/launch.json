@@ -13,8 +13,9 @@
             "cwd": "${workspaceRoot}",
             "stopOnEntry": false,
             "args": [
-                "--test", " artifacts\\build\\tests\\Authentication\\LogInLogOut.js",
-                "--env", "ofunk-localchrome"
+                "--test", "artifacts\\build\\tests\\Authentication\\LogInLogOut.js",
+                "--env", "ofunk-ieedge-selenium-grid"
+                // "--env", "ofunk-chrome-selenium-grid"
             ]
         }
     ]
